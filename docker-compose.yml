@@ -1,0 +1,17 @@
+version: "3.3"
+services:
+  pocketbase:
+    image: pocketbase
+    ports:
+      - "8090:8090"
+    volumes:
+      - data:/home/pocketbase/pb_data:rw
+    healthcheck:
+      test: ["CMD", "curl", "-f", "0.0.0.0:8090/_"]
+      interval: 5s
+      timeout: 30s
+      retries: 5
+      start_period: 5s
+
+volumes:
+  data:
