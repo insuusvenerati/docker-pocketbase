@@ -1,6 +1,6 @@
 FROM alpine:3.16
 
-ARG VERSION=0.7.2
+ARG VERSION=0.7.5
 
 ADD https://github.com/pocketbase/pocketbase/releases/download/v${VERSION}/pocketbase_${VERSION}_linux_amd64.zip /tmp/pocketbase.zip
 RUN unzip /tmp/pocketbase.zip -d /usr/local/bin \
