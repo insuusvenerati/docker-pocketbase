@@ -1,5 +1,7 @@
 This is an example of pocketbase running on fly.io backed by litefs + sqlite.
 
+> NOTE: At the moment this does not work as WAL mode, used by pocketbase, is not supported yet. https://community.fly.io/t/litefs-wal-mode/7325
+
 > See https://fly.io/docs/litefs/getting-started/ for a contrived example of litefs on fly.io.
 
 # Getting Started
