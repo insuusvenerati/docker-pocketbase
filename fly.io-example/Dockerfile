@@ -1,12 +1,12 @@
 ## Fetch litefs
-FROM flyio/litefs:pr-109 AS litefs
+FROM flyio/litefs:sha-887ba87 AS litefs
 
 
 FROM alpine:3.16
 
 COPY --from=litefs /usr/local/bin/litefs /usr/local/bin/litefs
 
-ARG VERSION=0.7.5
+ARG VERSION=0.7.10
 
 ADD https://github.com/pocketbase/pocketbase/releases/download/v${VERSION}/pocketbase_${VERSION}_linux_amd64.zip /tmp/pocketbase.zip
 ADD litefs.yml /etc/litefs.yml
