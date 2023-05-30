@@ -2,7 +2,7 @@
 FROM flyio/litefs:sha-887ba87 AS litefs
 
 
-FROM alpine:3.16
+FROM alpine:3.18
 
 COPY --from=litefs /usr/local/bin/litefs /usr/local/bin/litefs
 
